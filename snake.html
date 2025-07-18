@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css" />
+  <style>
+    .touch-controls {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .touch-controls div {
+      display: flex;
+      gap: 10px;
+    }
+
+    .ctrl-btn {
+      font-size: 2rem;
+      padding: 10px 20px;
+      border: none;
+      background-color: #5197d2;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .ctrl-btn:active {
+      background-color: #407bb3;
+    }
+
+    .like-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .liked {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div id="name">Snake Game</div>
+    <div id="score">Score : 0</div>
+  </div>
+  <div id="board"></div>
+
+  <!-- Touch Controls -->
+  <div class="touch-controls">
+    <button id="upBtn" class="ctrl-btn">▲</button>
+    <div>
+      <button id="leftBtn" class="ctrl-btn">◀</button>
+      <button id="downBtn" class="ctrl-btn">▼</button>
+      <button id="rightBtn" class="ctrl-btn">▶</button>
+    </div>
+  </div>
+
+  <button id="likeBtn" class="like-btn">👍 Like <span id="likeCount">0</span></button>
+  <script src="snake.js"></script>
+</body>
+
+</html>
